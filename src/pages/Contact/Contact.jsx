@@ -1,23 +1,19 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import 'dotenv/config'
-
-const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_PUBLIC_KEY } = process.env;
 
 const Contact = () => {
   const form = useRef();
-  // const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_PUBLIC_KEY } = process.env;
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm(REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, form.current, {
-        publicKey: REACT_APP_PUBLIC_KEY,
+      .sendForm(import.meta.env.REACT_APP_SERVICE_ID, import.meta.env.REACT_APP_TEMPLATE_ID, form.current, {
+        publicKey: import.meta.env.REACT_APP_PUBLIC_KEY,
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          console.log('message sent successfully!');
         },
         (error) => {
           console.log('FAILED...', error.text);
