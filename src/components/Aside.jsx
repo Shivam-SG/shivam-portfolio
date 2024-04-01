@@ -1,5 +1,6 @@
 import { GiCalendar, GiClawSlashes, GiMailbox, GiMayanPyramid, GiPhone, } from "react-icons/gi";
-
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
 const Aside = () => {
   return (
     <aside className="sidebar">
@@ -86,18 +87,21 @@ const Aside = () => {
         <ul className="social-list">
           <li className="social-item">
             <a href="#" className="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
+            <FaLinkedin />
+              <ion-icon name="logo-Linkedin"></ion-icon>
             </a>
           </li>
 
           <li className="social-item">
             <a href="#" className="social-link">
+            <FaXTwitter />
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
 
           <li className="social-item">
             <a href="#" className="social-link">
+            <FaInstagram />
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
           </li>
