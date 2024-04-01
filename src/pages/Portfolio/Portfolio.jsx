@@ -41,7 +41,7 @@ const Portfolio = () => {
 
       {/* Filter buttons */}
       <ul className="filter-list">
-        {["All", "Web development", "Graphic Design", "Applications"].map(
+        {["All", "Web development", "Graphic Design"].map(
           (category) => (
             <li className="filter-item" key={category}>
               <button
