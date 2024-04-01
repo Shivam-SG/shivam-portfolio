@@ -41,19 +41,17 @@ const Portfolio = () => {
 
       {/* Filter buttons */}
       <ul className="filter-list">
-        {["All", "Web development", "Graphic Design"].map(
-          (category) => (
-            <li className="filter-item" key={category}>
-              <button
-                className={category === selectedCategory ? "active" : ""}
-                onClick={() => handleFilterClick(category)}
-                data-filter-btn
-              >
-                {category}
-              </button>
-            </li>
-          )
-        )}
+        {["All", "Web development", "Graphic Design"].map((category) => (
+          <li className="filter-item" key={category}>
+            <button
+              className={category === selectedCategory ? "active" : ""}
+              onClick={() => handleFilterClick(category)}
+              data-filter-btn
+            >
+              {category}
+            </button>
+          </li>
+        ))}
       </ul>
 
       {/* Portfolio items */}
@@ -67,15 +65,15 @@ const Portfolio = () => {
               key={project.id}
             >
               <a href={project.link}>
-    <figure className="project-img">
-      <div className="project-item-icon-box">
-        <FaRegEye />
-      </div>
-      <img src={project.image} alt={project.title} loading="lazy" />
-    </figure>
-    <h3 className="project-title">{project.title}</h3>
-    <p className="project-category">{project.category}</p>
-  </a>
+                <figure className="project-img">
+                  <div className="project-item-icon-box">
+                    <FaRegEye />
+                  </div>
+                  <img src={project.image} alt={project.title} loading="lazy" />
+                </figure>
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-category">{project.category}</p>
+              </a>
             </li>
           ))}
         </ul>
