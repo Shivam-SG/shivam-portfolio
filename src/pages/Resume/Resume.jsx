@@ -60,7 +60,7 @@ const Resume = () => {
             description="I've proudly worked as a graphic designer, turning ideas into visually captivating realities."
           />
         </ol>
-        <a className="form-btn" href="/resume/SHIVAM_GUPTA_resume.pdf" download="SHIVAM_GUPTA_resume.pdf">Download Resume</a>
+        <a className="form-btn" href="/resume/Shivam-resume.pdf" download="Shivam-resume.pdf">Download Resume</a>
       </div>
       
     </section>
