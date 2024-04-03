@@ -33,6 +33,12 @@ const Portfolio = () => {
     }
   };
 
+  const openImageInNewTab = (imageLink, category) => {
+    if (category !== "Web development") {
+      window.open(imageLink, "_blank");
+    }
+  };
+
   return (
     <section className="portfolio" data-page="portfolio">
       <header>
@@ -65,7 +71,7 @@ const Portfolio = () => {
               key={project.id}
             >
               <a href={project.link}>
-                <figure className="project-img">
+                <figure className="project-img" onClick={() => openImageInNewTab(project.image, project.category)}>
                   <div className="project-item-icon-box">
                     <FaRegEye />
                   </div>
